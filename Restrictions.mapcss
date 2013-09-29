@@ -6,30 +6,13 @@ meta
     author: "przemas75";
     min-josm-version: "5198";
 }
-node
-{
-    symbol-shape: square;
-    symbol-size: 2;
-    symbol-stroke-color: #D3D3D3;
-    symbol-stroke-opacity: 0.1;
-}
-node:connection
-{
-    symbol-shape: square;
-    symbol-size: 2;
-    symbol-stroke-color: #D3D3D3;
-    symbol-stroke-opacity: 0.2;
-}
-relation[building],
-way[building]:closed
-{
-    width: 1;
-    color: #D3D3D3;
-    opacity: 0.1;
-    fill-color: #D3D3D3;
-    fill-opacity: 0.02;
-    z-index: 0.2;
-}
+node { symbol-shape: square; symbol-size: 2; symbol-stroke-color: #D3D3D3; symbol-stroke-opacity: 0.1; }
+node:connection { symbol-shape: square; symbol-size: 2; symbol-stroke-color: #D3D3D3; symbol-stroke-opacity: 0.2; }
+relation[building],way[building]:closed { width: 1; color: #D3D3D3; opacity: 0.1; fill-color: #D3D3D3; fill-opacity: 0.02; z-index: 0.2; }
+
+
+way[highway][vehicle=no]
+{  width:4; left-casing-color: red; left-casing-offset: +3; left-casing-width: 4; object-z-index:1.0; }
 
 way[highway][bicycle=no]::access_bicycle_no
 {
@@ -61,10 +44,7 @@ way[highway][goods]::access_goods
 		z-index:1.0;
 }
 
-way[highway][vehicle=no]
-{ left-casing-color: red;}
 way[highway]
 {
 	 text: "name"; text-color: white; font-weight: bold; font-size: 16; text-offset-y: 8;
 }
-
