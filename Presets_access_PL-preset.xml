@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+         author="przemas75"
+         version="1.0"
+         shortdescription="Restriction signs in Poland"
+		 description="Restriction signs in Poland: maxgcweight, maxweightrating, signs B-5,B-18,B-1"
+         pl.shortdescription="Znaki zakazu B-5,B-18,B-1">
+<group name="Ograniczenia wjazdu pojazdów" icon="B-5.png">
+		<item name="Znak B-18" icon="B-18.png" type="way,node,closedway">
+			<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+			<space />
+			<label text="Zakaz wjazdu pojazdów o rzeczywistej masie całkowitej ponad:" />
+			<space />
+			<text key="maxgcweight" text="Wartość na znaku" />
+			<text key="note:maxgcweight" text="Treść tabliczki pod znakiem" />
+			<multiselect  key="maxgcweight:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
+<!-- -->
+			<key key="source:maxgcweight" value="PL:sign_B-18" />
+		</item>
+<group name="Znak B-5" icon="B-5.png">
+		<item name="Znak B-5 bez tabliczki tonażowej" icon="B-5.png" type="way,node,closedway">
+			<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+			<key key="maxweightrating:hgv" value="3.5" />
+			<key key="maxweightrating:conditional" value="none @ marked" />
+			<key key="agricultural" value="no" />
+			<key key="hgv" value="no" />
+			<text key="note:maxgvweightrating:hgv" text="Treść tabliczki pod znakiem" />
+			<multiselect  key="maxweight:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
+<!-- -->
+			<key key="source:maxweightrating:hgv" value="PL:sign_B-5" />
+<!-- skasowanie wartości maxgcweight-->
+			<key key="maxgcweight" value="" />
+			<key key="maxgcweight:conditional" value="" />
+			<key key="note:maxgcweight"  />
+			<key key="source:maxgcweight" value="" />
+			<key key="source:maxgcweight:url" value="" />
+		</item>
+		<item name="Znak B-5 z tabliczką tonażową - pod znakiem lub na znaku" icon="B-5-note.png" type="way,node,closedway">
+			<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+			<space />
+			<label text="Zakaz wjazdu samochodów ciężarowych z DMC większym niż:" />
+			<space />
+			<text key="maxweightrating:hgv" text="Wartość na znaku" />
+			<key key="maxweightrating:conditional" value="none @ marked" />
+			<key key="agricultural" value="no" />
+			<text key="note:maxgvweightrating:hgv" text="Treść tabliczki pod znakiem" />
+			<multiselect  key="maxweight:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
+<!-- -->
+			<key key="source:maxweightrating" value="PL:sign_B-5-note" />
+<!-- skasowanie wartości maxgcweight-->
+			<key key="maxgcweight" value="" />
+			<key key="maxgcweight:conditional" value="" />
+			<key key="note:maxgcweight"  />
+			<key key="source:maxgcweight" value="" />
+			<key key="source:maxgcweight:url" value="" />
+		</item>
+</group>
+<group name="Znak B-1" icon="B-1.png" >
+		<item name="Znak B-1 bez dodatkowych informacji" icon="B-1.png" type="way,node,closedway">
+			<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+			<space />
+			<label text="Znak B-1 - zakazy wjazdu pojazdów w obu kierunkach" />
+			<key key="vehicle" value="no" />
+			<key key="source:access" value="PL:sign_B-1" />
+		</item>
+		<item name="Znak B-1 + T-22 (nie dotyczy rowerów)" icon="B-1.png" type="way,node,closedway">
+			<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+			<space />
+			<label text="Znak B-1 - zakazy wjazdu pojazdów w obu kierunkach" />
+			<key key="vehicle" value="no" />
+			<key key="bicycle" value="official" />
+		</item>
+		<item name="Znak B-1 + dodatkowa tablica z informacją" icon="B-1.png" type="way,node,closedway">
+		<link href="http://forum.openstreetmap.org/viewtopic.php?id=22627"/>
+		<space />
+		<label text="Znak B-1 - zakazy wjazdu pojazdów w obu kierunkach" />
+		<key key="vehicle" value="no" />
+		<combo key="bicycle" text="bicycle" pl.text="Rowery" values="yes,no" default="" delete_if_empty="true" />
+		<combo key="goods" text="bicycle" pl.text="Zaopatrzenie" values="yes,no" default="" delete_if_empty="true" />
+		<combo key="emergency" text="emergency" pl.text="Pojazdy uprzywilejowane" values="yes,no" default="" delete_if_empty="true" />
+		<combo key="destination" text="destination" pl.text="Dojazd do posesji, mieszkańcy" values="yes,no" default="" delete_if_empty="true" />
+		<text key="note:access" text="Treść tabliczki pod znakiem" />
+		</item>
+</group>
+
+</group>
+</presets>
