@@ -25,7 +25,7 @@
 			<key key="agricultural" value="no" />
 			<key key="hgv" value="no" />
 			<text key="note:maxgvweightrating:hgv" text="Treść tabliczki pod znakiem" />
-			<multiselect  key="maxweight:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
+			<multiselect  key="maxgvweightrating:hgv:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
 <!-- -->
 			<key key="source:maxweightrating:hgv" value="PL:sign_B-5" />
 <!-- skasowanie wartości maxgcweight-->
@@ -44,7 +44,7 @@
 			<key key="maxweightrating:conditional" value="none @ marked" />
 			<key key="agricultural" value="no" />
 			<text key="note:maxgvweightrating:hgv" text="Treść tabliczki pod znakiem" />
-			<multiselect  key="maxweight:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
+			<multiselect  key="maxgvweightrating:hgv:conditional" text="Nie dotyczy pojazdów" delimiter=";" values="none @ delivery; none @ marked" display_values="zaopatrzenia; służb komunalnych"/>
 <!-- -->
 			<key key="source:maxweightrating" value="PL:sign_B-5-note" />
 <!-- skasowanie wartości maxgcweight-->
