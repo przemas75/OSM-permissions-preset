@@ -1,0 +1,114 @@
+meta 
+{
+    title: "Weights";
+    description: "Weight road restrictions";
+    version: "1.1";
+    author: "przemas75";
+    min-josm-version: "5198";
+}
+
+node
+{
+    symbol-shape: square;
+    symbol-size: 2;
+    symbol-stroke-color: #D3D3D3;
+    symbol-stroke-opacity: 0.1;
+}
+node:connection
+{
+    symbol-shape: square;
+    symbol-size: 2;
+    symbol-stroke-color: #D3D3D3;
+    symbol-stroke-opacity: 0.2;
+}
+relation[building],
+way[building]:closed
+{
+    width: 1;
+    color: #D3D3D3;
+    opacity: 0.1;
+    fill-color: #D3D3D3;
+    fill-opacity: 0.02;
+    z-index: 0.2;
+}
+
+way[highway][maxweightrating:hgv]::weight_hgv
+{
+        color: #B0E0E6;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight <= 8]::maxgcweight1
+{
+        color: #FFF8DC;
+        z-index: -220; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+
+way[highway][maxgcweight > 8][maxgcweight <= 12]::maxgcweight2
+{
+        color: #FFEBCD;
+        z-index: -240; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 12][maxgcweight <= 16]::maxgcweight3
+{
+        color: #FFE4C4;
+        z-index: -200; width: 8;
+		opacity: 20;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 16][maxgcweight <= 20]::maxgcweight4
+{
+        color: #FFDEAD;
+        z-index: -200; width: 8;
+		opacity: 20;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 20][maxgcweight <= 24]::maxgcweight5
+{
+        color: #F5DEB3;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 24][maxgcweight <= 28]::maxgcweight7
+{
+        color: #DEB887;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 28][maxgcweight <= 32]::maxgcweight8
+{
+        color: #D2B48C;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 32][maxgcweight <= 36]::maxgcweight9
+{
+        color: #BDB76B;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}
+
+way[highway][maxgcweight > 36][maxgcweight <= 40]::maxgcweight10
+{
+        color: #B8860B;
+        z-index: -200; width: 8;
+		opacity: 10;
+		linecap: none;
+}

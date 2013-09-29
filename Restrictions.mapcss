@@ -1,0 +1,68 @@
+meta 
+{
+    title: "Restrictions";
+    description: "Road restrictions";
+    version: "1.1";
+    author: "przemas75";
+    min-josm-version: "5198";
+}
+node
+{
+    symbol-shape: square;
+    symbol-size: 2;
+    symbol-stroke-color: #D3D3D3;
+    symbol-stroke-opacity: 0.1;
+}
+node:connection
+{
+    symbol-shape: square;
+    symbol-size: 2;
+    symbol-stroke-color: #D3D3D3;
+    symbol-stroke-opacity: 0.2;
+}
+relation[building],
+way[building]:closed
+{
+    width: 1;
+    color: #D3D3D3;
+    opacity: 0.1;
+    fill-color: #D3D3D3;
+    fill-opacity: 0.02;
+    z-index: 0.2;
+}
+
+way[highway][bicycle=no]::access_bicycle_no
+{
+        color: #FF0000;
+        width: 2;
+		object-z-index:1.0
+}
+
+way[highway][bicycle!=no][bicycle]::access_bicycle
+{
+        color: #b100ff;
+        width: 2;
+		object-z-index:1.0
+}
+
+way[highway][destination]::access_destination
+{
+        color: #FAA460;
+        width: 4;
+		dashes: list(10,10);
+		z-index:1.0;
+}
+
+way[highway][goods]::access_goods
+{
+        color: #FFFF00;
+        width: 4;
+		dashes: list(20,20);
+		z-index:1.0;
+}
+
+way[highway]
+{
+	 text: "name"; text-color: white; font-weight: bold; font-size: 16; text-offset-y: 8;
+}
+
