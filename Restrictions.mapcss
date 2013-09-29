@@ -61,6 +61,8 @@ way[highway][goods]::access_goods
 		z-index:1.0;
 }
 
+way[highway][vehicle=no]
+{ left-casing-color: red;}
 way[highway]
 {
 	 text: "name"; text-color: white; font-weight: bold; font-size: 16; text-offset-y: 8;
