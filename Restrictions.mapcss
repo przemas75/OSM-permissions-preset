@@ -14,7 +14,7 @@ way[highway=~/living_street|residential|service|track|unclassified|motorway|trun
 { width: 2; color: #32CD32;  dashes: 9, 13; right-casing-width: 3; right-casing-offset: +3; width: 8}
 
 way[highway][vehicle=no]
-{   left-casing-color: red; left-casing-width: 2; left-casing-offset: 3; }
+{   left-casing-color: red; left-casing-width: 2; left-casing-offset: 2; }
 
 way[highway]["motor_vehicle:conditional"]
 {  color: #FF7F50;  dashes: 9, 13; right-casing-width: 3; right-casing-offset: +3; width: 8}
