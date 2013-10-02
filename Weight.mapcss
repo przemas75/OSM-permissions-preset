@@ -32,83 +32,88 @@ way[building]:closed
     z-index: 0.2;
 }
 
-way[highway][maxweightrating:hgv]::weight_hgv
+way[highway][maxweightrating:hgv <= 3.5 ]::weight_hgv
 {
-        color: #B0E0E6;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #B0E0E6; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 3.5][maxweightrating:hgv <= 5]::weight_hgv
+{
+        color: #ADD8E6; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 5][maxweightrating:hgv <= 8]::weight_hgv
+{
+        color: #87CEEB; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 8][maxweightrating:hgv <= 11]::weight_hgv
+{
+        color: #87CEFA; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 11][maxweightrating:hgv <= 16]::weight_hgv
+{
+        color: #00BFFF; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 16][maxweightrating:hgv <= 20]::weight_hgv
+{
+        color: #1E90FF; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 25][maxweightrating:hgv <= 30]::weight_hgv
+{
+        color: #6495ED; z-index: -200; width: 8; opacity: 10; linecap: none;
+}
+
+way[highway][maxweightrating:hgv > 30]::weight_hgv
+{
+        color: #4169E1; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight <= 8]::maxgcweight1
 {
-        color: #FFF8DC;
-        z-index: -220; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #FFF8DC; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 
 way[highway][maxgcweight > 8][maxgcweight <= 12]::maxgcweight2
 {
-        color: #FFEBCD;
-        z-index: -240; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #FFEBCD; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight > 12][maxgcweight <= 16]::maxgcweight3
 {
-        color: #FFE4C4;
-        z-index: -200; width: 8;
-		opacity: 20;
-		linecap: none;
+        color: #FFE4C4; z-index: -200; width: 8; opacity: 20; linecap: none;
 }
 
 way[highway][maxgcweight > 16][maxgcweight <= 20]::maxgcweight4
 {
-        color: #FFDEAD;
-        z-index: -200; width: 8;
-		opacity: 20;
-		linecap: none;
+        color: #FFDEAD; z-index: -200; width: 8; opacity: 20; linecap: none;
 }
 
 way[highway][maxgcweight > 20][maxgcweight <= 24]::maxgcweight5
 {
-        color: #F5DEB3;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #F5DEB3; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight > 24][maxgcweight <= 28]::maxgcweight7
 {
-        color: #DEB887;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #DEB887; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight > 28][maxgcweight <= 32]::maxgcweight8
 {
-        color: #D2B48C;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #D2B48C; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight > 32][maxgcweight <= 36]::maxgcweight9
 {
-        color: #BDB76B;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #BDB76B; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
 
 way[highway][maxgcweight > 36][maxgcweight <= 40]::maxgcweight10
 {
-        color: #B8860B;
-        z-index: -200; width: 8;
-		opacity: 10;
-		linecap: none;
+        color: #B8860B; z-index: -200; width: 8; opacity: 10; linecap: none;
 }
